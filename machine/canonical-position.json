@@ -1,0 +1,60 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "OpenAI",
+  "canonical_identity": "tool-authority-matrix",
+  "unique_value": [
+    "tool dispatch is default-deny and requires an explicit role/tool/scope grant plus a known tool schema before authorization",
+    "required arguments are enforced and every supplied argument must be explicitly schema-allowed, preventing silent parameter broadening",
+    "explicit request identifiers are single-use across both ALLOW and REFUSE decisions and reservation is synchronized for concurrent callers",
+    "dispatch receipts bind role, tool, scope, normalized arguments, request identity, verdict, reason, and decision details without executing the tool itself"
+  ],
+  "lineage_distinction": {
+    "GlacierEQ/openai-reasoning-budget-futures": "owns precommitted reasoning-resource budgets; complementary resource-authority plane, not tool-dispatch authority"
+  },
+  "capability_contribution": {
+    "family": "scoped_replay_safe_tool_authority",
+    "extractable_mechanisms": [
+      "default-deny role/tool authorization",
+      "scope-bound tool grants",
+      "known-schema prerequisite",
+      "required and unexpected argument refusal",
+      "single-use request identities across allow/refuse",
+      "concurrent request reservation",
+      "deterministic dispatch receipts"
+    ],
+    "ownership": "This repository remains the owning OpenAI-specialist implementation of scoped replay-safe tool authority; capability extraction preserves repository identity and lineage."
+  },
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "relationships": [
+    {"repository": "GlacierEQ/openai-reasoning-budget-futures", "kind": "COMPLEMENTARY_RESOURCE_AUTHORITY_COMPONENT", "integration_state": "NOT_CLAIMED"}
+  ],
+  "next_evolution": "Add signed/expiring/revocable grants, explicit effect classes and approval requirements, capability attenuation, and a provider adapter that preserves exact request identity through execution and confirmation while retaining default-deny and one-shot replay semantics.",
+  "evidence_refs": [
+    "README.md",
+    "ISSUE_CONTRACT.md",
+    "src/tool_authority.py",
+    "tests/test_tool_authority.py",
+    "tests/test_adversarial.py",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json"
+  ],
+  "nonclaims": [
+    "no OpenAI affiliation",
+    "no OpenAI internal architecture claim",
+    "authorization kernel does not itself execute tools",
+    "not a production OpenAI tool-dispatch deployment",
+    "repository relationships do not imply exercised integration"
+  ]
+}
