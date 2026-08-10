@@ -34,7 +34,6 @@
     {"at": "2026-08-10T06:25Z", "from": "DISCOVERED", "to": "IDENTITY_RESOLVED", "gate": "IDENTITY_RESOLVED", "result": "PASS", "note": "github GlacierEQ/openai-tool-authority-matrix"},
     {"at": "2026-08-10T06:25Z", "from": "IDENTITY_RESOLVED", "to": "PROBLEM_VERIFIED", "gate": "PROBLEM_VERIFIED", "result": "PASS", "note": "README/ISSUE_CONTRACT problem bound"},
     {"at": "2026-08-10T06:25Z", "from": "PROBLEM_VERIFIED", "to": "TARGET_CONTRACTED", "gate": "TARGET_CONTRACT_FROZEN", "result": "PASS", "note": "machine/target-contract.json"},
-    {"at": "2026-08-10T06:25Z", "from": "PROBLEM_VERIFIED", "to": "TARGET_CONTRACTED", "gate": "TARGET_CONTRACT_FROZEN", "result": "PASS", "note": "machine/target-contract.json"},
     {"at": "2026-08-10T06:25Z", "from": "TARGET_CONTRACTED", "to": "SEEDED", "gate": "DONOR_PLAN_RESOLVED", "result": "PASS", "note": "elite bar seed; donor_reuse=none"},
     {"at": "2026-08-10T06:25Z", "from": "SEEDED", "to": "VERTICAL_SLICE", "gate": "VERTICAL_SLICE_ALIVE", "result": "PASS", "note": "src mechanism + scripts/operate.py"},
     {"at": "2026-08-10T06:25Z", "from": "VERTICAL_SLICE", "to": "IMPLEMENTED", "gate": "CENTRAL_MECHANISM_PRESENT", "result": "PASS", "note": "central mechanism in src/"},
