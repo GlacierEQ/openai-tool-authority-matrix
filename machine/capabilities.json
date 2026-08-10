@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "capability_family": "scoped_replay_safe_tool_authority",
+  "capabilities": [
+    "default-deny-role-tool-authorization",
+    "scope-bound-tool-grants",
+    "known-schema-prerequisite",
+    "required-argument-refusal",
+    "unexpected-argument-refusal",
+    "single-use-request-identities",
+    "concurrent-request-reservation",
+    "deterministic-dispatch-receipts"
+  ],
+  "evidence_refs": [
+    "src/tool_authority.py",
+    "tests/test_tool_authority.py",
+    "tests/test_adversarial.py",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local authorization mechanisms only. The kernel does not execute tools and does not imply OpenAI adoption, production deployment, or exercised integration with adjacent repositories."
+}
