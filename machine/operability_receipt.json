@@ -1,0 +1,28 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "01d9afd15bd1e67493e25665289f773195e3be358955b5e9e2f8ed09e76b106d",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "module": "tool_authority",
+    "ok": true,
+    "repository": "GlacierEQ/openai-tool-authority-matrix",
+    "smoke": {
+      "args": [
+        "'sample_role'",
+        "'sample_tool'",
+        "{'k': 1}"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "dispatch",
+      "module_local": true,
+      "name": "ToolAuthorityMatrix",
+      "result": "DispatchReceipt(status=<DispatchStatus.REFUSE: 'REFUSE'>, reason='DEFAULT_DENY', fingerprint='dbcd48ad595fa4f0d99c51cf4df069cf0e92fa55b2599986a12640f4c351559c')"
+    }
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "source_sha": "01d9afd15bd1e67493e25665289f773195e3be358955b5e9e2f8ed09e76b106d",
+  "proof_receipt_digest": "4241717dcae3ccd7767a7cdfa0b077053b616b77dd1b6d2c33087e18a9b26963",
+  "not_after": 1788927149.234226,
+  "mac": "09505809c9c1b81995d77d607cee82402d86ebef3329b3df009a9296ae452752",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}

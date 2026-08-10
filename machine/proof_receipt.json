@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "source_sha": "01d9afd15bd1e67493e25665289f773195e3be358955b5e9e2f8ed09e76b106d",
+  "proof_id": "elite-openai-tool-authority-matrix-1786335149",
+  "environment": {
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/openai-tool-authority-matrix:/Users/kcbflux/job-app/repos/openai-tool-authority-matrix/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T04:12Z",
+  "artifact_hashes": {
+    "operability_receipt": "21f00874fabcf174db366a0c02e4bdbff77004be07dffb1dd4f02d577caf89d0"
+  }
+}
