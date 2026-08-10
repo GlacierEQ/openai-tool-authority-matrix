@@ -19,5 +19,5 @@
     "machine/proof_receipt.json",
     "machine/canonical-position.json"
   ],
-  "truth_boundary": "Repository-local authorization mechanisms only. The kernel does not execute tools and does not imply OpenAI adoption, production deployment, or exercised integration with adjacent repositories."
+  "truth_boundary": "Repository-local authorization mechanisms only. The kernel does not execute tools. No OpenAI adoption, production deployment, or exercised integration with adjacent repositories is implied."
 }
