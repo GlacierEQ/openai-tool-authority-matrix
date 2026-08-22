@@ -1,0 +1,66 @@
+{
+  "schema": "glaciereq.apex-capability-position.v1",
+  "repository": "GlacierEQ/openai-tool-authority-matrix",
+  "identity": "delegable-tool-authority-plane",
+  "state": "EVOLVING",
+  "operator_direction": "maximum coherent authority capability with proof-bound attenuation and no privilege amplification",
+  "implemented_surfaces": [
+    "src/tool_authority.py",
+    "src/delegation_authority.py",
+    "scripts/delegation_probe.py",
+    "scripts/ci/verify_elite_core.sh"
+  ],
+  "capabilities": [
+    "default-deny role/tool authorization",
+    "scope-bound grants",
+    "known-schema prerequisite",
+    "required and unexpected argument refusal",
+    "single-use synchronized request identities",
+    "deterministic dispatch receipts",
+    "HMAC-bound capability tokens",
+    "capability attenuation across delegated scope and arguments",
+    "bounded delegation depth",
+    "delegated expiry attenuation",
+    "delegated use-count attenuation",
+    "revocation",
+    "tamper refusal",
+    "replay refusal",
+    "receipt-producing delegation proof"
+  ],
+  "relationships": [
+    {
+      "repository": "GlacierEQ/openai-reasoning-budget-futures",
+      "relationship": "complementary resource-authority specialist",
+      "integration_state": "NOT_REQUIRED_FOR_LOCAL_EXECUTION",
+      "next_composition": "compose reasoning budget envelopes with delegated tool authority without collapsing either specialist"
+    },
+    {
+      "repository": "GlacierEQ/xai-colossus-cooling",
+      "relationship": "quality benchmark",
+      "borrowed_law": "real runtime + adversarial proof + failure/refusal + receipts + executable CI; no domain-copy requirement"
+    }
+  ],
+  "proof": {
+    "static_authority": "tests/test_tool_authority.py",
+    "delegation_authority": "tests/test_delegation_authority.py",
+    "adversarial_regression": "tests/test_adversarial.py",
+    "executable_receipt": "scripts/delegation_probe.py",
+    "repository_gate": "scripts/ci/verify_elite_core.sh",
+    "ci": ".github/workflows/tests.yml"
+  },
+  "truth_boundary": [
+    "independent GlacierEQ portfolio engineering",
+    "no OpenAI affiliation or internal architecture claim",
+    "authorization logic does not itself execute external tools",
+    "HMAC proof uses repository-local test/runtime secrets rather than production KMS",
+    "no production identity-provider or execution adapter is claimed"
+  ],
+  "next_capability_vector": [
+    "explicit effect classes and approval requirements",
+    "provider adapter that preserves request identity into execution confirmation",
+    "reasoning-budget envelope composition",
+    "revocation lineage across delegated descendants",
+    "key-rotation and external signer interfaces",
+    "property/state-machine fuzzing for attenuation invariants"
+  ]
+}
