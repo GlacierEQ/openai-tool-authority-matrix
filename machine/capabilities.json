@@ -1,7 +1,7 @@
 {
   "schema": "glaciereq.repo-capabilities.v1",
   "repository": "GlacierEQ/openai-tool-authority-matrix",
-  "capability_family": "scoped_replay_safe_tool_authority",
+  "capability_family": "delegable_replay_safe_tool_authority",
   "capabilities": [
     "default-deny-role-tool-authorization",
     "scope-bound-tool-grants",
@@ -10,14 +10,27 @@
     "unexpected-argument-refusal",
     "single-use-request-identities",
     "concurrent-request-reservation",
-    "deterministic-dispatch-receipts"
+    "deterministic-dispatch-receipts",
+    "hmac-bound-capability-tokens",
+    "delegated-scope-attenuation",
+    "delegated-argument-attenuation",
+    "delegated-expiry-attenuation",
+    "delegated-use-attenuation",
+    "bounded-delegation-depth",
+    "token-revocation",
+    "tamper-refusal",
+    "delegated-use-ceilings",
+    "receipt-producing-delegation-proof"
   ],
   "evidence_refs": [
     "src/tool_authority.py",
+    "src/delegation_authority.py",
     "tests/test_tool_authority.py",
+    "tests/test_delegation_authority.py",
     "tests/test_adversarial.py",
-    "machine/proof_receipt.json",
-    "machine/canonical-position.json"
+    "scripts/delegation_probe.py",
+    "scripts/ci/verify_elite_core.sh",
+    "machine/apex-position.json"
   ],
-  "truth_boundary": "Repository-local authorization mechanisms only. The kernel does not execute tools. No OpenAI adoption, production deployment, or exercised integration with adjacent repositories is implied."
+  "truth_boundary": "Repository-local authorization and capability-delegation mechanisms only. The authority plane does not execute external tools. No OpenAI adoption, production deployment, production KMS, identity-provider integration, or provider-side execution confirmation is implied."
 }
